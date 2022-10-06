@@ -1,0 +1,19 @@
+*{
+    color: white;
+}
+
+h3{
+    margin:0;
+    font-size: 1.5em;
+}
+
+.top{
+    display: flex;
+    justify-content: space-around;
+}
+
+.call, .email{
+    display: flex;
+    width: 12em;
+    justify-content: space-around;
+}
