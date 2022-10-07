@@ -11,3 +11,9 @@ p{
     margin-top: 2em;
 }
 
+
+:host ::ng-deep  .mat-form-field-outline {
+  background-color: white;
+  border-radius: 5px;
+}
+
