@@ -1,10 +1,13 @@
 header{
     background-color:#29313d;
-    height: 8vh;
+    height: 60px;
+}
+.header-container{
+    // width: 1200px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    
+    margin: 0 auto;
 }
 
 header .nav-bar{
@@ -12,11 +15,13 @@ header .nav-bar{
     justify-content: space-around;
     align-items: center;
     height: 3em;
-    width: 35em;
+    width: 36em;
+    margin-top: 10px;
 }
 
 header .logo{
     font-size: 2rem;
+    margin-top: 10px;
 }
 
 header .nav-bar ul {
@@ -24,10 +29,10 @@ header .nav-bar ul {
     align-items: center;
     justify-content: space-around;
     gap: 20px;
-    width: 27rem;
+    width: 28rem;
     background-color:rgb(197,90,17);
     list-style: none;
-    padding: 0.3em;
+    padding: 0.2em;
     margin: 5px 0;
     font-size: 1.2em;
     border-radius: 5px;
@@ -51,23 +56,23 @@ mat-icon,
 .burger{
     transform: scale(1.5);
     position: absolute;
-    right: 50px;
+    top: 17px;
+    right: 60px;
     display: none;
 }
 
 @media screen and (max-width: 900px) {
 
     header .nav-bar {
-        display: none;
+        display: none;;
     }
-
-    header .logo{
-        position: absolute;
-        left:50px;
+    .header-container{
+        padding:10px;
     }
 
     .burger{
         display: block;
+
     }
 }
 

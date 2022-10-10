@@ -1,0 +1,57 @@
+.contact-profil-container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.phone{
+    display: flex;
+    flex-direction: column;
+    // width: 100%;
+    padding-bottom: 4px;
+}
+
+.bottom-input{
+    width: 66%;
+    padding-left:0 ;
+    padding-right: 0;
+}
+
+.ville{
+    display: flex;
+    flex-direction: column;
+    // width: 60%;
+}
+
+label{
+    padding-bottom: 3px;
+}
+
+.form-line{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+@media (max-width: 900px){
+    .form-line{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    form{
+        display: block;
+    }
+    .bottom-input{
+        display: block;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

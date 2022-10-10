@@ -1,9 +1,12 @@
 #footer{
-    height: 30vh;
     display: flex;
-
 }
 
+.footer-container{
+    width: 100%;
+    flex-direction: row-reverse;
+    height: 25vh;
+}
 #left{
     background-color: #29313d;
     flex: 1;
@@ -15,7 +18,7 @@
 }
 
 @media screen and (max-width: 900px) {
-    #right{
-        display: none;
+    .footer-container{
+        display: block;
     }
 }

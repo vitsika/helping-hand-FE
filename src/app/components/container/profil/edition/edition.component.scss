@@ -1,0 +1,20 @@
+.separateur-hrz{
+    width: 80%;
+    background-color: #29313d;
+    border: 2px solid #29313d;
+    margin: 0 auto;
+}
+
+.edition-container{
+    max-width: 992px;
+    border: 2px solid #29313d;
+    margin-bottom: 40px;
+    border-radius: 3px;
+}
+
+@media (max-width: 900px){
+    
+.edition-container{
+    border: none;
+}
+}

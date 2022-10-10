@@ -1,0 +1,16 @@
+.apropos-container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    resize: none;
+    width: 100%;
+}
+.form-textarea {
+    width: 65%;
+}
+
+@media (max-width: 900px){
+    .form-textarea {
+        width: 100%;
+    }
+}

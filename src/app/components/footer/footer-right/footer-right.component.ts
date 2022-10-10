@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-footer-right',
   templateUrl: './footer-right.component.html',
