@@ -1,3 +1,7 @@
+.content{
+    flex-wrap: wrap;
+}
+
 .categories-container{
     background-color: var(--main-color-green);
 }
@@ -6,7 +10,7 @@
     border-radius: 6px;
     max-width: 130px;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 90px;
 }
 
 .categorie-image{
@@ -26,10 +30,16 @@
 
 a{
         text-decoration: none;
-        color: inherit;
+        color: black;
+        font-family: 'odor mean chey', serif;
+        font-weight:100;
     }
 
 .categorie-info{
     margin-top: 5%;
     color: var(--main-color);
+    
 }
+
+/*----Media Query--------*/
+

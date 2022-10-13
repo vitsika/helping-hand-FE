@@ -1,4 +1,6 @@
-
+.container{
+    padding: 0;
+}
 
 a{
     text-decoration: none;
@@ -74,7 +76,7 @@ a{
 /*----Media Query-------*/
 
 @media screen and (max-width:992px) {
-    
+
     .website-adresse{
         min-width: auto;
     }
