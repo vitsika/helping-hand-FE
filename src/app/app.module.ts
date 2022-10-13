@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -22,8 +21,16 @@ import { UserProfilComponent } from './components/container/profil/edition/user-
 import { ContactProfilComponent } from './components/container/profil/edition/contact-profil/contact-profil.component';
 import { AboutMeComponent } from './components/container/profil/edition/about-me/about-me.component';
 import { MatButtonModule } from '@angular/material/button';
-import { ButtonComponent } from '../assets/button/button.component';
-import { PageTitleComponent } from '../assets/page-title/page-title.component';
+import { ButtonComponent } from './components/components-tools/button/button.component';
+import { PageTitleComponent } from './components/components-tools/page-title/page-title.component';
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './app.routing';
+import { ProductsComponent } from './components/container/home/products/products.component';
+import { HomeComponent } from './components/container/home/home.component';
+import { SearchBarComponent } from './components/container/home/search-bar/search-bar.component';
+import { CategoriesComponent } from './components/container/home/categories/categories.component';
+
+
 
 @NgModule({
   declarations: [
@@ -43,9 +50,13 @@ import { PageTitleComponent } from '../assets/page-title/page-title.component';
     AboutMeComponent,
     ButtonComponent,
     PageTitleComponent,
-
-
+    ProductsComponent,
+    HomeComponent,
+    SearchBarComponent,
+    CategoriesComponent,
   ],
+
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -54,8 +65,10 @@ import { PageTitleComponent } from '../assets/page-title/page-title.component';
     NgbModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule.forRoot(ROUTES)
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

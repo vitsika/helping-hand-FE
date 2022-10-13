@@ -1,9 +1,8 @@
 header{
     background-color:#29313d;
-    height: 60px;
+    height: 80px;
 }
 .header-container{
-    // width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,7 +15,7 @@ header .nav-bar{
     align-items: center;
     height: 3em;
     width: 36em;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 header .logo{
@@ -54,25 +53,24 @@ mat-icon,
 }
 
 .burger{
-    transform: scale(1.5);
-    position: absolute;
-    top: 17px;
-    right: 60px;
+
     display: none;
 }
 
 @media screen and (max-width: 900px) {
+    header{
+        padding-top: 1.4em;
+    }
 
     header .nav-bar {
-        display: none;;
-    }
-    .header-container{
-        padding:10px;
+        display: none;
     }
 
     .burger{
         display: block;
-
+        transform: scale(2);
+        margin-right: 0.5rem;
+        margin-top: 0.8rem;
     }
 }
 

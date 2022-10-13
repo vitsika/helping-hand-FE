@@ -1,21 +1,35 @@
 
 .profil-name{
-    background-color:#4073b9;
+    background-color:var(--main-color-blue);
+    // background-image: url('/assets/images/fourmis.jpeg');
     height: 260px;
+    position: relative;
+}
+
+img{
+    height: 260px;
+    width: 100%;
+    object-fit: cover;
+    z-index: 50;
 }
 
 .name{
     color: white;
+    padding: 38px 0;
 }
 
 .user-icon{
     font-size: 300px;
-    background-color:#e5eff7 ;
-    height: 100px;
+    background-color:var(--main-color-blueTwo);
+    height: 104px;
     border-radius: 3px;
-    padding: 5px;
     max-width: 992px;
+    border: solid 1px #29313d;
+    // line-height: 0%;
+    position: relative;
+    // transform: translate(50%,50%);
 }
+
 :host ::ng-deep  .material-icons-sharp {
     display: flex;
     height: 100px;
@@ -24,7 +38,9 @@
     align-items: center;
     justify-content: center;
     position: absolute;
+    top: 10%;
     transform: translate(-50%, -50%);
+    left: 50%;
     color: white;
 }
 
@@ -35,7 +51,8 @@
     border: 2px solid #003153;
     border-radius: 50%;
     position: absolute;
-    top: 220px;
+    left: 50%;
+    top: 10%;
     transform: translate(-50%, -50%);
 } 
 
@@ -43,24 +60,27 @@
     background-color: rgb(197,90,17);
     border-radius: 5px;
     position: absolute;
-    top: 250px;
-    right:25%;
+    top: 30%;
+    right:8%;
     color: white;
     box-sizing: content-box;
 }
+
 /*---------------*
 Media query
 *----------------*/
-@media (max-width: 900px){
+@media screen and (max-width: 900px){
     .cercle { 
         height: 0.3em; 
         width: 0.3em; 
     } 
+
     :host ::ng-deep  .mat-raised-button {
-        position: absolute;
-        top: 120px;
-        right: 10%;
+        // position: absolute;
+        top: 30%;
+        right: 6%;
     }
+
     h2{
         font-size: 1.2em;
     }
@@ -68,4 +88,5 @@ Media query
     p{
         font-size: 0.8em;
     }
+
 }

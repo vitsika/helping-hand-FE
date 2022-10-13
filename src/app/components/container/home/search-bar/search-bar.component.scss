@@ -1,0 +1,96 @@
+
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.website-adresse{
+    min-width: 250px;
+}
+
+.website-adresse h2{
+    display: block;
+    font-size: 30px;
+    color: var(--main-color-green);
+    text-transform: uppercase;
+    margin: 30px 0;
+}
+
+.website-search-bar{
+    height: 50px;
+}
+
+.website-search-bar input{
+    background-color:#efefef;
+    border-radius: 50px 0 0 50px;
+    outline:none;
+    border: none;
+    border-right:1px solid var(--main-color);
+    font-size: 1.1rem;
+}
+
+.website-search-bar select{
+    background-color: #efefef;
+    outline: none;
+    border: none;
+    border-right:1px solid var(--main-color);
+    border-left:1px solid var(--main-color);
+    font-size: 1.1rem;
+    color: var(--main-color-grey);
+}
+
+.website-search-bar select option{
+    font-size: 14px;
+}
+
+.website-search-icon{
+    background-color: #efefef;
+    border-radius: 0 50px 50px 0;
+    width: 50px;
+    border-left:1px solid var(--main-color);
+}
+
+.website-phone{
+    height: 50px;
+}
+
+.website-phone .call-message h3{
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--main-color-grey);
+}
+
+.website-phone .call-message a{
+    font-weight: bold;
+}
+
+.call-icon .material-icons{
+    transform: scale(1.5);
+    color: var(--main-color-grey);
+    margin: 5px 10px 0 20px;
+}
+
+/*----Media Query-------*/
+
+@media screen and (max-width:992px) {
+    
+    .website-adresse{
+        min-width: auto;
+    }
+
+    .website-search-bar{
+        display: none;
+    }
+
+    .website-searchBar{
+        justify-content: space-between;
+        flex: 1;
+    }
+}
+
+@media screen and (max-width:900px){
+    .container{
+        width: 100%;
+    }
+}
