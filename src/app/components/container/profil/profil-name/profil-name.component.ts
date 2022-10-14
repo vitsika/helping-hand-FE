@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilNameComponent implements OnInit {
 
-  bg:string =  '/src/assets/images/fourmis.jpeg';
 
   constructor() { }
 

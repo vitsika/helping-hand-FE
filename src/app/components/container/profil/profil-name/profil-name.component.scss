@@ -1,21 +1,31 @@
 
 .profil-name{
-    background-color:var(--main-color-blue);
-    // background-image: url('/assets/images/fourmis.jpeg');
+    background-color:var(--main-color-green);
     height: 260px;
     position: relative;
+}
+
+.profil-container{
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    backdrop-filter: brightness(50%);
 }
 
 img{
     height: 260px;
     width: 100%;
     object-fit: cover;
-    z-index: 50;
+    opacity: 0.5;
+    
 }
 
+
 .name{
-    color: white;
+    color: var(--main-color);
     padding: 38px 0;
+    z-index: 5;
+    
 }
 
 .user-icon{
@@ -25,7 +35,6 @@ img{
     border-radius: 3px;
     max-width: 992px;
     border: solid 1px #29313d;
-    // line-height: 0%;
     position: relative;
     // transform: translate(50%,50%);
 }
@@ -56,7 +65,7 @@ img{
     transform: translate(-50%, -50%);
 } 
 
-:host ::ng-deep  .mat-raised-button {
+:host ::ng-deep  app-button{
     background-color: rgb(197,90,17);
     border-radius: 5px;
     position: absolute;

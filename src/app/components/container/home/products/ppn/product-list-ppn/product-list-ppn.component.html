@@ -1,0 +1,10 @@
+<!-- Affichage du composant product-item --> 
+<div class="product-list container ">
+    <app-product-item-ppn 
+        *ngFor="let product_ppn of products_ppn" [product_ppn] = "product_ppn"
+        (displayProductViewModal)="handleDisplayProductViewModal($event)">
+    </app-product-item-ppn>
+
+    <app-modal-product-view *ngIf="isDisplayModal"></app-modal-product-view>
+</div>
+

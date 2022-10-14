@@ -29,13 +29,14 @@ import { ProductsComponent } from './components/container/home/products/products
 import { HomeComponent } from './components/container/home/home.component';
 import { SearchBarComponent } from './components/container/home/search-bar/search-bar.component';
 import { CategoriesComponent } from './components/container/home/categories/categories.component';
-import { ProductListComponent } from './components/container/home/products/ppn/product-list/product-list.component';
-import { ProductItemComponent } from './components/container/home/products/ppn/product-item/product-item.component';
+import { ProductListComponent } from './components/container/home/products/ppn/product-list-ppn/product-list-ppn.component';
+import { ProductItemComponent } from './components/container/home/products/ppn/product-item-ppn/product-item-ppn.component';
 import { PpnComponent } from './components/container/home/products/ppn/ppn.component';
 import { SanteHygieneComponent } from './components/container/home/products/sante-hygiene/sante-hygiene.component';
 import { KitScolaireComponent } from './components/container/home/products/kit-scolaire/kit-scolaire.component';
 import { TravauxComponent } from './components/container/home/products/travaux/travaux.component';
 import { CultureComponent } from './components/container/home/products/culture/culture.component';
+import { ModalProductViewComponent } from './components/modal-product-view/modal-product-view.component';
 
 
 
@@ -68,6 +69,7 @@ import { CultureComponent } from './components/container/home/products/culture/c
     KitScolaireComponent,
     TravauxComponent,
     CultureComponent,
+    ModalProductViewComponent,
   ],
 
 

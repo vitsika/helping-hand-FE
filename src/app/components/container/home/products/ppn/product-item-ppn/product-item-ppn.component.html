@@ -1,0 +1,20 @@
+<!-- Methode handleClickproduct qui vient de "item-ppn.ts" pour écouter evenement -->
+<div class="product-ppn-item" (click)="handleClickProduct(product_ppn)">
+    <div class="product-ppn-image ">
+        <!-- Si product_ppn existe on affiche  "product_ppn.imageUrl[0]" sinon on affiche rien-->
+        <img 
+        [src]="product_ppn ? product_ppn.imageUrl[0] : '' " 
+        [alt]="product_ppn?.name">
+    </div>
+<!------- Information  produit  -->
+    <div class="product-ppn-details">
+        <div class="product-ppn-name  tc">
+<!------ "?" a été ajouter ( pour l'Affichage de product_ppn s'i existe) -->
+            <h2>{{ product_ppn?.name?.substring(0,50) }}</h2>    
+        </div>
+        <div class="product-ppn-price  tc">
+<!-------"0" a été ajouter : si tu existes = afficher sinon value = 0-->
+            <h3>{{ "Prix : " + (product_ppn?.regular_price || 0)/100 + " €" }}</h3>
+        </div>
+    </div>
+</div>
