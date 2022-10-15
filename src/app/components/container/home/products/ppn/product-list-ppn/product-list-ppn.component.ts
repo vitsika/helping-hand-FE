@@ -14,6 +14,7 @@ export class ProductListComponent implements OnInit {
 /*----(Booleen) isDisplayModal:Le modal ne s'affiche pas ici----*/
 
 isDisplayModal: boolean = false
+  modalProduct: Product | undefined
 
   constructor() { }
 
@@ -27,7 +28,8 @@ isDisplayModal: boolean = false
           imageUrl: [
             '/assets/images/products_ppn/ppn_riz/ppn_riz_1/1.jpeg',
           ],
-          regular_price: 4999,
+          euro_price: 4999,
+          ariary_price: 200000,
           created_at: new Date,
         },
         {
@@ -38,7 +40,8 @@ isDisplayModal: boolean = false
           imageUrl: [
             '/assets/images/products_ppn/ppn_riz/ppn_riz_2/1.jpeg',
           ],
-          regular_price: 2599,
+          euro_price: 2599,
+          ariary_price: 100000,
           created_at: new Date,
         },
         {
@@ -49,7 +52,8 @@ isDisplayModal: boolean = false
           imageUrl: [
             '/assets/images/products_ppn/ppn_pattes/ppn_pattes_1/1.jpeg',
           ],
-          regular_price: 1599,
+          euro_price: 1599,
+          ariary_price: 500000,
           created_at: new Date,
         },
         {
@@ -60,7 +64,8 @@ isDisplayModal: boolean = false
           imageUrl: [
             '/assets/images/products_ppn/ppn_pattes/ppn_pattes_2/2.jpeg',
           ],
-          regular_price: 1599,
+          euro_price: 1599,
+          ariary_price: 200000,
           created_at: new Date,
         },
         {
@@ -71,7 +76,8 @@ isDisplayModal: boolean = false
           imageUrl: [
             '/assets/images/products_ppn/ppn_sucre/1.jpeg',
           ],
-          regular_price: 1699,
+          euro_price: 1699,
+          ariary_price: 200000,
           created_at: new Date,
         },
         {
@@ -82,7 +88,8 @@ isDisplayModal: boolean = false
           imageUrl: [
             '/assets/images/products_ppn/ppn_farine/1.jpeg',
           ],
-          regular_price: 1399,
+          euro_price: 1399,
+          ariary_price: 200000,
           created_at: new Date,
         },
         {
@@ -93,7 +100,8 @@ isDisplayModal: boolean = false
           imageUrl: [
             '/assets/images/products_ppn/ppn_haricots/1.jpeg',
           ],
-          regular_price: 9699,
+          euro_price: 9699,
+          ariary_price: 200000,
           created_at: new Date,
         },
         {
@@ -104,7 +112,8 @@ isDisplayModal: boolean = false
           imageUrl: [
             '/assets/images/products_ppn/ppn_huile/1.jpeg',
           ],
-          regular_price: 6899,
+          euro_price: 6899,
+          ariary_price: 200000,
           created_at: new Date,
         },
       ]
@@ -113,7 +122,14 @@ isDisplayModal: boolean = false
     console.log(product_ppn);
     /*----affichage de modal si condition true------*/
     if(product_ppn){
-      this.isDisplayModal = true;
+      this.isDisplayModal = true
+      /*------la valeur product_ppn dans le modal-----*/
+      this.modalProduct = product_ppn
     }
+  }
+
+  handleCloseModal(){
+    this.isDisplayModal = false
+    this.modalProduct = undefined
   }
 }

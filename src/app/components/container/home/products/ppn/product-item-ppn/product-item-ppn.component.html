@@ -12,9 +12,11 @@
 <!------ "?" a été ajouter ( pour l'Affichage de product_ppn s'i existe) -->
             <h2>{{ product_ppn?.name?.substring(0,50) }}</h2>    
         </div>
-        <div class="product-ppn-price  tc">
+        <div class="product-ppn-price flex jcc aic gap-20">
 <!-------"0" a été ajouter : si tu existes = afficher sinon value = 0-->
-            <h3>{{ "Prix : " + (product_ppn?.regular_price || 0)/100 + " €" }}</h3>
+            <h3>{{"Tarif : " + (product_ppn?.euro_price || 0)/100 + " €" }}</h3>
+            <p>-</p>
+            <h3>{{(product_ppn?.ariary_price || 0) + " Ar" }}</h3>
         </div>
     </div>
 </div>

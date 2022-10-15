@@ -5,6 +5,7 @@
     height: 300px;
     text-align: center;
     cursor: pointer;
+    border: 0.1px solid var(--main-color-green);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
@@ -17,7 +18,7 @@
 }
 
 .product-ppn-details{
-    border: 1px solid var(--main-color-black);
+    border: 0.1px solid var(--main-color-green);
     border-radius: 3px;
     height:65px;
 }

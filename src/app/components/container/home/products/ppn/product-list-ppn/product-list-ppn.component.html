@@ -4,7 +4,13 @@
         *ngFor="let product_ppn of products_ppn" [product_ppn] = "product_ppn"
         (displayProductViewModal)="handleDisplayProductViewModal($event)">
     </app-product-item-ppn>
+<!-- lorsque isDisplay est "true" et modalProduct existe: on l'affiche et donner la val product-ppn -->
+    <app-modal-product-view 
+    *ngIf="isDisplayModal && modalProduct"
+    [product_ppn]="modalProduct"
+    (close)="handleCloseModal()"
+    >
 
-    <app-modal-product-view *ngIf="isDisplayModal"></app-modal-product-view>
+    </app-modal-product-view>
 </div>
 

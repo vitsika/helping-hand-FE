@@ -4,7 +4,8 @@ export interface Product {
     description: string,
     imageUrl: string[],
     category: string[],
-    regular_price: number,
+    euro_price: number,
+    ariary_price: number,
     created_at: Date,
     updated_at?: Date,
 }
