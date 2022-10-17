@@ -37,6 +37,8 @@ import { KitScolaireComponent } from './components/container/home/products/kit-s
 import { TravauxComponent } from './components/container/home/products/travaux/travaux.component';
 import { CultureComponent } from './components/container/home/products/culture/culture.component';
 import { ModalProductViewComponent } from './components/modal-product-view/modal-product-view.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductsContainerComponent } from './components/products-container/products-container.component';
 
 
 
@@ -70,6 +72,7 @@ import { ModalProductViewComponent } from './components/modal-product-view/modal
     TravauxComponent,
     CultureComponent,
     ModalProductViewComponent,
+    ProductsContainerComponent,
   ],
 
 
@@ -82,7 +85,8 @@ import { ModalProductViewComponent } from './components/modal-product-view/modal
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    HttpClientModule
   ],
 
   providers: [],
