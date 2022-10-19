@@ -84,12 +84,15 @@ mat-icon,
 }
 
 .burger{
-
+    cursor: pointer;
     display: none;
+    color: var(--main-color);
 }
+
+
 /*-------------Media Query------------*/
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 992px){
     .header-container{
         width: 100vw;
     }

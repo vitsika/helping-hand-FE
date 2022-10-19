@@ -39,6 +39,7 @@ import { CultureComponent } from './components/container/home/products/culture/c
 import { ModalProductViewComponent } from './components/modal-product-view/modal-product-view.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsContainerComponent } from './components/products-container/products-container.component';
+import { AsideNavComponent } from './components/aside-nav/aside-nav.component';
 
 
 
@@ -73,6 +74,7 @@ import { ProductsContainerComponent } from './components/products-container/prod
     CultureComponent,
     ModalProductViewComponent,
     ProductsContainerComponent,
+    AsideNavComponent,
   ],
 
 

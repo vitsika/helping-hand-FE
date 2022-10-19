@@ -11,8 +11,8 @@ import { environment } from 'src/environments/environment';
 export class ProductService {
   /*------Centralisation de tout les données products---*/
   private products: Product[] = []
-  /*-Recuperation via une requette http -*/
-  private urlApi: string = "assets/api/products_ppn.json"
+  /*-Recuperation via une requette http  en passant par environnement -*/
+  private urlApi: string = environment.serverUrl.products
     
   
   constructor(private http: HttpClient) { }
@@ -28,7 +28,6 @@ export class ProductService {
       }
     })
   }*/
-
   getProducts(): Observable<Product[]>{
     /*
     GET=> récupèrer des données
@@ -40,14 +39,14 @@ export class ProductService {
     return this.http.get<Product[]>(this.urlApi)
   }
   
-  addProducts(product: Product){
+  // addProducts(product: Product){
   
-  }
-  editProducts(_id: string,product: Product){
+  // }
+  // editProducts(_id: string,product: Product){
   
-  }
-  deleteProducts(_id: string){
+  // }
+  // deleteProducts(_id: string){
   
-  }
+  // }
 
 }

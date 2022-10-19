@@ -5,6 +5,7 @@ import { HomeComponent } from "./components/container/home/home.component";
 import { ProductItemComponent } from "./components/container/home/products/ppn/product-item-ppn/product-item-ppn.component";
 import { ProductListComponent } from "./components/container/home/products/ppn/product-list-ppn/product-list-ppn.component";
 import { ProfilComponent } from "./components/container/profil/profil.component";
+import { ProductsContainerComponent } from "./components/products-container/products-container.component";
 
 
 export const ROUTES : Routes = [
@@ -31,5 +32,11 @@ export const ROUTES : Routes = [
         component: ProductListComponent,
         pathMatch: 'full'
     },
+    {
+        path: 'products',
+        component: ProductListComponent,
+        pathMatch: 'full'
+    },
+
 
 ]

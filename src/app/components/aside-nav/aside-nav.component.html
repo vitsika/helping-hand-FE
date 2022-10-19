@@ -1,0 +1,12 @@
+<div class="aside-nav mobile-nav flex jcc aic ">
+    <ul class="unlisted">
+        <li *ngFor="let item of navs_data">
+            <!-- Click ecouter evenmennt pour fermer le menu aside-nav -->
+            <a
+            (click)="handleClose()"
+            [routerLink]="item?.path">{{ item?.name }}</a></li>            
+    </ul>
+
+</div>
+
+

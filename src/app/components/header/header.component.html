@@ -5,10 +5,7 @@
         </div>
         <div class="nav-bar">
             <ul>
-                <li><a routerLink="/home">Accueil</a></li>
-                <li><a routerLink="ppn">Produits</a></li>
-                <li><a routerLink="#">Contact</a></li>
-                <li><a routerLink="#">Connexion</a></li>
+                <li *ngFor="let item of navs_data"><a [routerLink]="item?.path">{{ item?.name }}</a></li>
                 <li><a routerLink="#"><span class="material-icons">shopping_cart</span></a></li>            
             </ul>
             <div class="user-icon">
@@ -17,12 +14,13 @@
                     </mat-icon></a>
             </div>
         </div>
-        <div class="burger">
-            <a href="#">
+        <div class="burger" (click)="handleDisplayMobileNav()">
                 <span class="material-icons">menu</span>
-            </a>
-            
         </div>
     </div>
     
 </header>
+<!-- affichage du menu si l'ecran est en dessous de 900px -->
+<app-aside-nav 
+(close)="handleCloseMobileNav()"
+*ngIf="isDisplayMobileNav"></app-aside-nav>
