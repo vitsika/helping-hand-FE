@@ -1,6 +1,18 @@
-<div class="categories-container  flex jcc aic">
-    <div class="content container flex jcsa">
-        <div class="categorie">
+<div class="categories-container ">
+        <ul class="categorie container flex jcc aic ">
+            <li class="listPuce flex " *ngFor="let cat of categories_data">
+                <div class="categorie-image">
+                    <a [routerLink]="cat?.path">
+                        <img src="{{ cat?.image }}" >
+                    </a>
+                    
+                </div>
+                <div class="categorie-info">
+                    <a [routerLink]="cat?.path">{{ cat?.name }}</a>
+                </div>
+            </li>
+        </ul>
+        <!-- <div class="categorie">
             <div class="categorie-image">
                 <a href="/ppn">
                     <img src="assets/images/img_categorie/ppn.webp"  alt="image ppn">
@@ -48,8 +60,8 @@
                 </h3>
             </div>
         </div>
-        <div class="categorie">
-            <div class="categorie-image">
+        <div class="categorie"> -->
+            <!-- <div class="categorie-image">
                 <a href="#">
                     <img src="assets/images/img_categorie/culture.png"  alt="image bricolage">
                 </a>
@@ -57,8 +69,8 @@
             <div class="categorie-info">
                 <h3>
                     <a href="#">CULTURE</a>
-                </h3>
-            </div>
-        </div>
+                </h3> -->
+            <!-- </div>
+        </div> -->
     </div>
-</div>
+
