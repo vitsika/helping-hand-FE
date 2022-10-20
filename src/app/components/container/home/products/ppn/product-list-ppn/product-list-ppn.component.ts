@@ -34,6 +34,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
     /*-(products: Product[]) c'est ce qui a été indiquer dans product.service.ts(Observable)-*/
     next: (products: Product[])=>{
       this.products_ppn = products
+      this.productService.setProductSubject(products)
     },
     /*-En cas d'erreur-*/
     error: (error: any)=>{
@@ -44,6 +45,10 @@ export class ProductListComponent implements OnInit, OnDestroy {
       console.log("complete");
       
     },
+    })
+
+    this.productService.getProductSubject().subscribe (products =>{
+      this.products_ppn = products
     })
   }
 

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Product } from '../models/product';
 import { environment } from 'src/environments/environment';
 
@@ -13,6 +13,9 @@ export class ProductService {
   private products: Product[] = []
   /*-Recuperation via une requette http  en passant par environnement -*/
   private urlApi: string = environment.serverUrl.products
+
+  
+  private productSubject:BehaviorSubject<any> = new BehaviorSubject({}) 
     
   
   constructor(private http: HttpClient) { }
@@ -48,5 +51,13 @@ export class ProductService {
   // deleteProducts(_id: string){
   
   // }
+
+  getProductSubject (): Observable<any>{
+    return this.productSubject.asObservable();
+  }
+
+  setProductSubject (products: any){
+    this.productSubject.next(products)
+  }
 
 }

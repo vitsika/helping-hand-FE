@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Category } from '../models/category';
 import { ResultRequest } from '../models/result-request';
@@ -19,4 +19,6 @@ export class CategoriesService {
   getCategories(): Observable<ResultRequest<Category>> {
     return this.http.get<ResultRequest<Category>>(this.urlApi)
   }
+
+
 }
