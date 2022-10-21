@@ -2,6 +2,12 @@
 import { Item_cat } from "../models/items_cat";
 
 export const categories_items : Item_cat[]= [
+    
+    {
+        name:"Tous",
+        path: "Tous",
+        image: "assets/images/img_categorie/culture.png"
+    },
     {
         name:"Ppn",
         path: "home",
@@ -27,5 +33,5 @@ export const categories_items : Item_cat[]= [
         name:"Culture",
         path: "Culture",
         image: "assets/images/img_categorie/culture.png"
-    },
+    }
 ]

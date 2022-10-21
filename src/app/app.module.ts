@@ -25,20 +25,10 @@ import { ButtonComponent } from './components/components-tools/button/button.com
 import { PageTitleComponent } from './components/components-tools/page-title/page-title.component';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routing';
-import { ProductsComponent } from './components/container/home/products/products.component';
 import { HomeComponent } from './components/container/home/home.component';
 import { SearchBarComponent } from './components/container/home/search-bar/search-bar.component';
-import { CategoriesComponent } from './components/container/home/categories/categories.component';
-import { ProductListComponent } from './components/container/home/products/ppn/product-list-ppn/product-list-ppn.component';
-import { ProductItemComponent } from './components/container/home/products/ppn/product-item-ppn/product-item-ppn.component';
-import { PpnComponent } from './components/container/home/products/ppn/ppn.component';
-import { SanteHygieneComponent } from './components/container/home/products/sante-hygiene/sante-hygiene.component';
-import { KitScolaireComponent } from './components/container/home/products/kit-scolaire/kit-scolaire.component';
-import { TravauxComponent } from './components/container/home/products/travaux/travaux.component';
-import { CultureComponent } from './components/container/home/products/culture/culture.component';
-import { ModalProductViewComponent } from './components/modal-product-view/modal-product-view.component';
+import { ProductItemComponent } from './components/container/home/product/product.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ProductsContainerComponent } from './components/products-container/products-container.component';
 import { AsideNavComponent } from './components/aside-nav/aside-nav.component';
 
 
@@ -61,20 +51,10 @@ import { AsideNavComponent } from './components/aside-nav/aside-nav.component';
     AboutMeComponent,
     ButtonComponent,
     PageTitleComponent,
-    ProductsComponent,
     HomeComponent,
     SearchBarComponent,
-    CategoriesComponent,
-    ProductListComponent,
-    ProductItemComponent,
-    PpnComponent,
-    SanteHygieneComponent,
-    KitScolaireComponent,
-    TravauxComponent,
-    CultureComponent,
-    ModalProductViewComponent,
-    ProductsContainerComponent,
     AsideNavComponent,
+    ProductItemComponent
   ],
 
 

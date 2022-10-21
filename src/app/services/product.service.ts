@@ -52,12 +52,4 @@ export class ProductService {
   
   // }
 
-  getProductSubject (): Observable<any>{
-    return this.productSubject.asObservable();
-  }
-
-  setProductSubject (products: any){
-    this.productSubject.next(products)
-  }
-
 }

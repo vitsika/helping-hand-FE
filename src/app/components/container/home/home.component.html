@@ -1,7 +1,35 @@
 <app-search-bar></app-search-bar>
 
-<app-categories></app-categories>
+<div class="categories-container ">
+    <ul class="categorie container flex jcc aic ">
+        <li class="listPuce flex " *ngFor="let cat of categories_data">
+            <div class="categorie-image">
+                <a href="#" (click)="filterProducts(cat.name)">
+                    <img src="{{ cat?.image }}" >
+                </a>
+                
+            </div>
+            <div class="categorie-info">
+                <a >{{ cat?.name }} </a>
 
-<app-products></app-products>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="page-title flex aic jcsb container ">
+    <h2>{{ title }}</h2>
+</div>
+<!-- Affichage du composant product-item --> 
+<div class="product-list container ">
+    <app-product 
+        *ngFor="let product of products" [product] = "product"
+        (displayProductViewModal)="handleDisplayProductViewModal($event)">
+    </app-product>
+<!-- lorsque isDisplay est "true" et modalProduct existe: on l'affiche et donner la val product-ppn -->
+  
+</div>
+
+
 
 
