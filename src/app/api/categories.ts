@@ -4,9 +4,9 @@ import { Item_cat } from "../models/items_cat";
 export const categories_items : Item_cat[]= [
     
     {
-        name:"Tous",
+        name:"Tous produits",
         path: "Tous",
-        image: "assets/images/img_categorie/culture.png"
+        image: "assets/images/img_categorie/tousProduits.jpeg"
     },
     {
         name:"Ppn",

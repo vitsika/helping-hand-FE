@@ -14,17 +14,18 @@ export class HomeComponent implements OnInit {
   categories_data: Item_cat[] = categories_items
   products:Product[] = []
   Initialproducts:Product[] = []
-  title:string="Les produits essentiels"
+  title:string="Tous produits"
   
 
   /*----(Booleen) isDisplayModal:Le modal ne s'affiche pas ici----*/
   
     isDisplayModal: boolean = false
     modalProduct: Product | undefined
-  
+
     /* -- Création de variable pour accueillir un Observable */
   
     productsSub: Subscription | undefined
+
 
 
   constructor(private productService: ProductService) { }
@@ -59,10 +60,14 @@ export class HomeComponent implements OnInit {
     // filter product by cat name
     console.log(this.categories_data)
     console.log(this.Initialproducts)
+    /* Filtrage de tous les produits appeler Initialproducts ici*/
     let p = this.Initialproducts.filter((e:any) => e.category.some((cat:any) => cat.name === catName))
+    /* Affichage dynamique de la variable p (categorie choisie), la valeur de this.pruducts devient la valeur de p*/
     this.products = p
+    /* Idem pour le titre */
     this.title = catName
-    if (catName==="Tous"){
+    /* si l'user clique sur l'onglet tous nos produits dans la barre de categorie */
+    if (catName==="Tous produits"){
       this.products = this.Initialproducts
     }
 
@@ -82,14 +87,10 @@ export class HomeComponent implements OnInit {
       this.modalProduct = product
     }
   }
-
+  
   handleCloseModal(){
     this.isDisplayModal = false
     this.modalProduct = undefined
   }
   
-
-  
-
-
 }

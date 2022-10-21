@@ -30,6 +30,8 @@ import { SearchBarComponent } from './components/container/home/search-bar/searc
 import { ProductItemComponent } from './components/container/home/product/product.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AsideNavComponent } from './components/aside-nav/aside-nav.component';
+import { ModalProductViewComponent } from './components/modal-product-view/modal-product-view.component';
+import { LoadingComponent } from './loading/loading.component';
 
 
 
@@ -54,7 +56,9 @@ import { AsideNavComponent } from './components/aside-nav/aside-nav.component';
     HomeComponent,
     SearchBarComponent,
     AsideNavComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    ModalProductViewComponent,
+    LoadingComponent
   ],
 
 

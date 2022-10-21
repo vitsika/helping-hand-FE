@@ -141,12 +141,13 @@ a{
     text-transform: uppercase;
     padding: 5px 10px;
     border: 0.1px solid var(--main-color);
-    border-radius: 8px;
+    border-radius: 5px;
     font-size: 14px;
     appearance: auto;
     background-color: var(--main-color-orange);
     color: var(--main-color);
-    margin: 5px;
+    margin: 50px;
+    min-width: 150px;
 }
 
 .btn.btn-medium, app-button.btn-medium{
@@ -586,6 +587,10 @@ a{
 
 .aic{
     align-items:center;
+}
+
+.column{
+    flex-direction: column;
 }
 /*------------------*
 # Flex

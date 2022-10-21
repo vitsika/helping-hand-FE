@@ -1,0 +1,20 @@
+<div class="modal-product-view">
+    <div class="overlay"></div>
+    <div class="modal-product-view-container flex ">
+        <div class="modal-product-view-image flex-1">
+            <img 
+            [src]="product? product.imageUrl[0] : '' " 
+            [alt]="product?.name"
+            >
+        </div>
+        <div class="modal-product-view-details flex-1 flex aic jcc column">
+            <h2>{{product?.name}}</h2>
+            <div class="modal-product-view-details-price flex jcc aic column">
+                <h3>{{"Tarif : " + (product?.euro_price || 0)/100 + " €" }}</h3>
+                <h3>{{(product?.ariary_price || 0) + " Ar" }}</h3>
+            </div>
+            <app-button (click)="closeModal()" buttonValue="Fermer"></app-button>
+        </div>
+    </div>
+
+</div>

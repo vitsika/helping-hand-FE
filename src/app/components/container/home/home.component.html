@@ -11,24 +11,32 @@
             </div>
             <div class="categorie-info">
                 <a href="#"(click)="filterProducts(cat.name)">{{ cat?.name }} </a>
-
             </div>
         </li>
     </ul>
 </div>
 
-<div class="page-title flex aic jcsb container ">
+<div class="page-title flex  mt-5 container aic px-0">
     <h2>{{ title }}</h2>
 </div>
-<!-- Affichage du composant product-item --> 
-<div class="product-list container ">
+<!-- Affichage du composant product--> 
+<div class="product-list container">
     <app-product 
         *ngFor="let product of products" [product] = "product"
         (displayProductViewModal)="handleDisplayProductViewModal($event)">
+        <!-- ($event) pour recuperer l'evenement -->
+        <!-- "PS:au dessus":Des lors que l'evenement displayProductViewModal est declencher,executer la methode handle-->
     </app-product>
-<!-- lorsque isDisplay est "true" et modalProduct existe: on l'affiche et donner la val product-ppn -->
-  
+
+    <app-modal-product-view 
+    *ngIf="isDisplayModal && modalProduct"
+    [product]="modalProduct"
+    (close)="handleCloseModal()"
+    >
+    </app-modal-product-view>
 </div>
+
+
 
 
 
