@@ -1,16 +1,18 @@
 <app-search-bar></app-search-bar>
 
 <div class="categories-container ">
+
+    <mat-progress-spinner [mode]="'indeterminate'" *ngIf="loading$ |async"></mat-progress-spinner>
     <ul class="categorie container flex jcc aic " >
         <li class="listPuce flex " *ngFor="let cat of categories_data" >
             <div class="categorie-image" >
-                <a href="#" (click)="filterProducts(cat.name)">
+                <a href="#" (click)="filterProducts(cat.name)" (click)="fetchCat()">
                     <img src="{{ cat?.image }}" >
                 </a>
                 
             </div>
             <div class="categorie-info">
-                <a href="#"(click)="filterProducts(cat.name)">{{ cat?.name }} </a>
+                <a href="#"(click)="filterProducts(cat.name)" (click)="fetchCat()">{{ cat?.name }} </a>
             </div>
         </li>
     </ul>

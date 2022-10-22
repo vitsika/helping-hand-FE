@@ -28,10 +28,12 @@ import { ROUTES } from './app.routing';
 import { HomeComponent } from './components/container/home/home.component';
 import { SearchBarComponent } from './components/container/home/search-bar/search-bar.component';
 import { ProductItemComponent } from './components/container/home/product/product.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AsideNavComponent } from './components/aside-nav/aside-nav.component';
 import { ModalProductViewComponent } from './components/modal-product-view/modal-product-view.component';
 import { LoadingComponent } from './loading/loading.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { NetworkInterceptor } from './services/network.interceptor';
 
 
 
@@ -72,10 +74,15 @@ import { LoadingComponent } from './loading/loading.component';
     MatInputModule,
     MatButtonModule,
     RouterModule.forRoot(ROUTES),
-    HttpClientModule
+    HttpClientModule,
+    MatProgressSpinnerModule
   ],
 
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: NetworkInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
