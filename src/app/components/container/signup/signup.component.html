@@ -1,0 +1,51 @@
+<app-search-bar></app-search-bar>
+
+<div class="connexion container">
+    <form action="" [formGroup]="signupForm">
+        <h1>Inscription</h1>
+        <div class="social-media gap-20">
+        </div>
+        <p class="choose-email">ou utiliser mon adresse e-mail :</p>
+    
+        <div class="inputs">
+            <input type="text" name="firstname" [formControl]="firstname" placeholder="Prénom *" />
+            <div class="error" *ngIf="firstname.dirty && !firstname.valid">
+                <p *ngIf="firstname.hasError('required')">
+                    Le prénom est requis.
+                </p>
+            </div>
+            <input type="text" name="lastname" [formControl]="lastname" placeholder="Nom *" />
+            <div class="error" *ngIf="lastname.dirty && !lastname.valid">
+                <p *ngIf="lastname.hasError('required')">
+                    Le nom est requis.
+                </p>
+            </div>
+            <input type="email" name="email" [formControl]="email" placeholder="Email *"/>
+            <div class="error" *ngIf="email.dirty && !email.valid">
+                <p *ngIf="email.hasError('required')">
+                    L'email est requis.
+                </p>
+                <p *ngIf="!email.hasError('required')">
+                    L'email ne repecte pas le format.
+                </p>
+                
+            </div>
+            <input type="password" name="password" [formControl]="password" placeholder="Mot de passe *"/>
+            <div class="error" *ngIf="password.dirty && !password.valid">
+                <p *ngIf="password.hasError('required')">
+                    Le mot de passe est requis.
+                </p>
+                <p *ngIf="password.hasError('minlength')">
+                    Le mot de passe doit avoir minimum 8 caracteres.
+                </p>
+            </div>
+        </div>
+    
+        <p class="inscription">J'ai déjà un compte. Je me <span><a routerLink="/connexion">connecte.</a> </span> </p>
+        <div align="center">
+            <button [disabled]="!this.signupForm.valid" (click)="handleSubmit()" type="submit">S'inscrire</button>
+        </div>
+
+    </form>
+
+</div>

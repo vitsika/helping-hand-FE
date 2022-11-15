@@ -6,8 +6,8 @@ export const environment = {
   production: false,
   /*Mise en place */ 
   serverUrl: { 
-    products : "assets/api/products_ppn.json",
-    categories: "assets/api//categories.json"}
+    products : "http://localhost:3000/api/product",
+    categories: "assets/api/categories.json"}
 };
 
 /*

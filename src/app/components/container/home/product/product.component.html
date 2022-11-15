@@ -1,5 +1,7 @@
+<mat-progress-spinner [mode]="'indeterminate'" *ngIf="loading$ |async"></mat-progress-spinner>
+
 <!-- Methode handleClickproduct qui vient de "item-ppn.ts" pour écouter evenement -->
-<div class="product-ppn-item" (click)="handleClickProduct(product)">
+<div class="product-ppn-item" (click)="handleClickProduct(product)" (click)="fetchProduct()">
     <div class="product-ppn-image ">
         <!-- Si product_ppn existe on affiche  "product_ppn.imageUrl[0]" sinon on affiche rien-->
         <img 

@@ -147,7 +147,7 @@ a{
     background-color: var(--main-color-orange);
     color: var(--main-color);
     margin: 50px;
-    min-width: 150px;
+    min-width: 50px;
 }
 
 .btn.btn-medium, app-button.btn-medium{

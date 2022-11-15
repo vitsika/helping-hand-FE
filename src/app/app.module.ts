@@ -34,7 +34,11 @@ import { ModalProductViewComponent } from './components/modal-product-view/modal
 import { LoadingComponent } from './loading/loading.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NetworkInterceptor } from './services/network.interceptor';
-
+import { SignupComponent } from './components/container/signup/signup.component';
+import { SigninComponent } from './components/container/signin/signin.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
+import {GoogleLoginProvider} from '@abacritt/angularx-social-login';
 
 
 @NgModule({
@@ -60,7 +64,9 @@ import { NetworkInterceptor } from './services/network.interceptor';
     AsideNavComponent,
     ProductItemComponent,
     ModalProductViewComponent,
-    LoadingComponent
+    LoadingComponent,
+    SignupComponent,
+    SigninComponent,
   ],
 
 
@@ -75,14 +81,36 @@ import { NetworkInterceptor } from './services/network.interceptor';
     MatButtonModule,
     RouterModule.forRoot(ROUTES),
     HttpClientModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    FormsModule,
+    ReactiveFormsModule,
+    SocialLoginModule,
   ],
 
   providers: [{
     provide: HTTP_INTERCEPTORS,
     useClass: NetworkInterceptor,
     multi: true
-  }],
+  },
+  
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '874209430174-c9en807262b89nlqrhp5235h54uim2ro.apps.googleusercontent.com'
+            )
+          }
+        ],
+        onError: (err) => {
+          console.error(err);
+        }
+      } as SocialAuthServiceConfig,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

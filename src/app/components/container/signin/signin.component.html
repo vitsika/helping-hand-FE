@@ -1,0 +1,42 @@
+<app-search-bar></app-search-bar>
+
+<div class="connexion container">
+    <form action="" [formGroup]="signinForm">
+        <h1>Connexion</h1>
+        <div class="social-media gap-20">
+            <p>Se connecter avec</p>
+            <asl-google-signin-button *ngIf="!user"></asl-google-signin-button>
+        </div>
+        <p class="choose-email">ou utiliser mon adresse e-mail :</p>
+    
+        <div class="inputs" *ngIf="!user">
+            <input type="email" name="email" [formControl]="email" placeholder="Email" />
+            <div class="error" *ngIf="email.dirty && !email.valid">
+                <p *ngIf="email.hasError('required')">
+                    L'email est requis.
+                </p>
+                <p *ngIf="!email.hasError('required')">
+                    L'email ne repecte pas le format.
+                </p>
+                
+            </div>
+            <input type="password" name="password" [formControl]="password" placeholder="Mot de passe"/>
+            <div class="error" *ngIf="password.dirty && !password.valid">
+                <p *ngIf="password.hasError('required')">
+                    Le mot de passe est requis.
+                </p>
+                <p *ngIf="password.hasError('minlength')">
+                    Le mot de passe doit avoir minimum 8 caracteres.
+                </p>
+            </div>
+        </div>
+        
+        
+
+        <p class="inscription">Je n'ai pas de compte. Je m' <span><a routerLink="/inscription">inscris ici</a></span> </p>
+        <div align="center">
+            <button [disabled]="!this.signinForm.valid" (click)="handleSubmit()" type="submit">Se connecter</button>
+        </div>
+    </form>
+
+</div>

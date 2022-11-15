@@ -1,7 +1,8 @@
 import { Routes } from "@angular/router";
-import { ContainerComponent } from "./components/container/container.component";
 import { HomeComponent } from "./components/container/home/home.component";
 import { ProfilComponent } from "./components/container/profil/profil.component";
+import { SigninComponent } from "./components/container/signin/signin.component";
+import { SignupComponent } from "./components/container/signup/signup.component";
 
 
 export const ROUTES : Routes = [
@@ -22,7 +23,13 @@ export const ROUTES : Routes = [
         component: HomeComponent,
         pathMatch: 'full'
     },
-
-
-
+    {
+        path: 'connexion',
+        component: SigninComponent,
+    },
+    {
+        path: 'inscription',
+        component: SignupComponent,
+        pathMatch: 'full'
+    },
 ]

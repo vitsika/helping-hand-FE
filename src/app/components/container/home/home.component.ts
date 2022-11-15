@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
   constructor(private productService: ProductService, public loader: LoadingService, private http: HttpClient) { }
 /* fonction Get de api pour le spinner*/
   fetchCat(){
-    this.http.get('assets/api//categories.json').subscribe(res=> {
+    this.http.get('assets/api/categories.json').subscribe(res=> {
       console.log(res);
       
     })
@@ -43,9 +43,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
       /*----Recuperer en Observable et afficher les données dans service.ts----*/
   this.productsSub = this.productService.getProducts()
+
   .subscribe({
-    
-    /*-(products: Product[]) c'est ce qui a été indiquer dans product.service.ts(Observable)-*/
+    /*-(products: Product[]) vient de product.service.ts(Observable)-*/
     next: (products: Product[])=>{
       this.products = products
       this.Initialproducts = products

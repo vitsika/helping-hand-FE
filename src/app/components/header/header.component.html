@@ -1,12 +1,16 @@
 <header >
     <div class="header-container container">
         <div class="logo">
-            <a href="#">LOGO</a>
+            <a href="#"><img width="80" height="80" src="https://vitsika.tech/wp-content/uploads/2021/09/logo-1.png" ></a>
         </div>
         <div class="nav-bar">
             <ul>
-                <li *ngFor="let item of navs_data"><a [routerLink]="item?.path">{{ item?.name }}</a></li>
-                <li><a routerLink="#"><span class="material-icons">shopping_cart</span></a></li>            
+                <!-- <li *ngFor="let item of navs_data"><a [routerLink]="item?.path">{{ item?.name }}</a></li> -->
+                <li><a routerLink="/home">Accueil</a></li>
+                <li><a routerLink="/produits">Produits</a></li>
+                <li><a routerLink="/contact">Contact</a></li>
+                <li><a routerLink="/connexion">Connexion</a></li>
+                <li><a routerLink="#"><span class="material-icons">shopping_cart</span></a></li>
             </ul>
             <div class="user-icon">
                 <a routerLink="/edit-profil"><mat-icon class="material-icons-sharp">

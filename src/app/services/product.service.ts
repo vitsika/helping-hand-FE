@@ -20,17 +20,6 @@ export class ProductService {
   
   constructor(private http: HttpClient) { }
 
-  /*Récupération des produits par la fonction et injecter dans product_list en promise---
-
-  getProducts(): Promise<Product[]>{
-    return new Promise((resolve, reject)=>{
-      if(this.products.length){
-        resolve(this.products)
-      }else{
-        reject([])
-      }
-    })
-  }*/
   getProducts(): Observable<Product[]>{
     /*
     GET=> récupèrer des données
