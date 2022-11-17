@@ -24,7 +24,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { ButtonComponent } from './components/components-tools/button/button.component';
 import { PageTitleComponent } from './components/components-tools/page-title/page-title.component';
 import { RouterModule } from '@angular/router';
-import { ROUTES } from './app.routing';
 import { HomeComponent } from './components/container/home/home.component';
 import { SearchBarComponent } from './components/container/home/search-bar/search-bar.component';
 import { ProductItemComponent } from './components/container/home/product/product.component';
@@ -72,14 +71,13 @@ import {GoogleLoginProvider} from '@abacritt/angularx-social-login';
 
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
     NgbModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    RouterModule.forRoot(ROUTES),
+    AppRoutingModule,
     HttpClientModule,
     MatProgressSpinnerModule,
     FormsModule,

@@ -35,7 +35,10 @@ export class SigninComponent implements OnInit {
     this.authService.authState.subscribe((user) => {
       this.user = user;
       this.loggedIn = (user != null);
+      this.loggedIn?localStorage.setItem("idToken",this.user.idToken):null
       console.log(this.user);
+      //save token localstorage
+
       
     });
   }
