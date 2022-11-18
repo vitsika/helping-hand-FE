@@ -38,6 +38,7 @@ import { SigninComponent } from './components/container/signin/signin.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
 import {GoogleLoginProvider} from '@abacritt/angularx-social-login';
+import { AuthguardService } from './services/AuthguardService';
 
 
 @NgModule({
@@ -85,7 +86,10 @@ import {GoogleLoginProvider} from '@abacritt/angularx-social-login';
     SocialLoginModule,
   ],
 
-  providers: [{
+  providers: [
+    AuthguardService,
+    
+    {
     provide: HTTP_INTERCEPTORS,
     useClass: NetworkInterceptor,
     multi: true

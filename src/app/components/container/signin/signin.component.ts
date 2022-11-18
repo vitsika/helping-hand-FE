@@ -1,7 +1,7 @@
 import { SocialAuthService } from '@abacritt/angularx-social-login';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators, FormGroup } from '@angular/forms';
-import { User } from 'src/app/models/user';
+
 
 
 @Component({

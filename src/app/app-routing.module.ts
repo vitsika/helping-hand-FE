@@ -4,9 +4,9 @@ import { HomeComponent } from './components/container/home/home.component';
 import { ProfilComponent } from './components/container/profil/profil.component';
 import { SigninComponent } from './components/container/signin/signin.component';
 import { SignupComponent } from './components/container/signup/signup.component';
+import { AuthguardGuard } from './guards/authguard.guard';
 
-
-export const ROUTES : Routes = [
+const ROUTES : Routes = [
   {
       path: '',
       component: HomeComponent,
@@ -16,7 +16,8 @@ export const ROUTES : Routes = [
   {
       path: 'edit-profil',
       component: ProfilComponent,
-      pathMatch: 'full'
+      pathMatch: 'full',
+      // canActivate:[AuthguardGuard]
   },
 /*--Creation route vers la page d'accueil--*/
   {
